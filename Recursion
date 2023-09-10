@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Recursion {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter the integer number you want to get the factorial for: ");
+        int num = input.nextInt();
+
+        System.out.println("The factorial of " + num + " is: " + factorial(num));
+
+    }
+
+    public static int factorial(int num) {
+
+        int i = 1;
+
+        // This is our base case
+        if (i == num) {
+
+            return num;
+
+        }
+        // THis is the recursive call
+        num = num * factorial(num - 1);
+        return num;
+    }
+
+}
